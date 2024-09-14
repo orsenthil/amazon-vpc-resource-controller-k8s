@@ -122,8 +122,8 @@ echo "Starting the ginkgo test suite"
 load_cluster_details
 
 # Addons is supported from 1.18 onwards
-load_addon_details
-install_add_on "$LATEST_ADDON_VERSION"
+# load_addon_details
+# install_add_on "$LATEST_ADDON_VERSION"
 
 attach_controller_policy_cluster_role
 set_env_aws_node "ENABLE_POD_ENI" "true"
