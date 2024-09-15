@@ -110,7 +110,7 @@ var _ = Describe("Security Group Per Pod", func() {
 
 			serverContainer := manifest.NewBusyBoxContainerBuilder().
 				Name("sgp-server").
-				Image("nginx").
+				Image("310468514827.dkr.ecr.us-isof-south-1.csp.hci.ic.gov/networking-e2e-test-images/nginx:1.25.2_amd64").
 				AddContainerPort(v1.ContainerPort{
 					ContainerPort: int32(serverPort),
 				}).
@@ -143,7 +143,7 @@ var _ = Describe("Security Group Per Pod", func() {
 					// The Job Pod tests HTTP connection to server Pod which
 					// acts as a High Level check for SGP Pod Networking
 					jobContainer := manifest.NewBusyBoxContainerBuilder().
-						Image("curlimages/curl").
+						Image("310468514827.dkr.ecr.us-isof-south-1.csp.hci.ic.gov/networking-e2e-test-images/curlimages/curl:latest").
 						Command([]string{"/bin/sh"}).
 						Args([]string{"-c",
 							fmt.Sprintf(
