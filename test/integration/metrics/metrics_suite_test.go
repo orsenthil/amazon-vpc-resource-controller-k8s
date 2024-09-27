@@ -75,7 +75,7 @@ func getCurrentControllerImage() (string, error) {
 }
 
 func createCurlPod() (*v1.Pod, error) {
-	container := manifest.NewBusyBoxContainerBuilder().Image("310468514827.dkr.ecr.us-isof-south-1.csp.hci.ic.gov/networking-e2e-test-images/curlimages/curl:latest").Name("curl").Build()
+	container := manifest.NewBusyBoxContainerBuilder().Image("577579559164.dkr.ecr.eu-isoe-west-1.cloud.adc-e.uk/networking-e2e-test-images/curlimages/curl:latest").Name("curl").Build()
 	pod, err := manifest.NewDefaultPodBuilder().Name("curl").Namespace(controller.Namespace).Container(container).Build()
 	if err != nil {
 		return nil, err

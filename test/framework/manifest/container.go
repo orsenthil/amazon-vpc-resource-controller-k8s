@@ -30,7 +30,7 @@ type Container struct {
 func NewBusyBoxContainerBuilder() *Container {
 	return &Container{
 		name:            "busybox",
-		image:           "310468514827.dkr.ecr.us-isof-south-1.csp.hci.ic.gov/networking-e2e-test-images/busybox",
+		image:           "577579559164.dkr.ecr.eu-isoe-west-1.cloud.adc-e.uk/networking-e2e-test-images/busybox",
 		imagePullPolicy: v1.PullIfNotPresent,
 		command:         []string{"sleep", "3600"},
 		args:            []string{},
